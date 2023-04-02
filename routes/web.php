@@ -17,3 +17,7 @@ Route::get('/customer', function(){
     print_r($customers->toArray());
 });
 */
+
+Route::get('/view', function(){
+    return view('view');
+});
