@@ -27,7 +27,12 @@ class controll extends Controller
         $customers->status = $req['status'];
         $customers->points = $req['points'];
         $customers->save();
-        
+
+        return redirect('/view');
+    }
+
+    public function view(){
+
     }
 
 }
