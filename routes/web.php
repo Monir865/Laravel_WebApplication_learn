@@ -7,7 +7,7 @@ use App\Models\customer;
 
 Route::get('/',[controll::class, 'index']);
 
-Route::get('/registration', [controll::class, 'registration']);
+Route::get('/registration', [controll::class, 'registration'])->name('customer.register.form');
 Route::post('/registration', [controll::class, 'register']);
 
 /*
@@ -18,6 +18,6 @@ Route::get('/customer', function(){
 });
 */
 
-Route::get('/view', function(){
-    return view('view');
-});
+Route::get('/view', [controll::class, 'view']);
+
+Route::get('/removeRegister/{id}', [controll::class, 'removeRegister'])->name('register.remove');

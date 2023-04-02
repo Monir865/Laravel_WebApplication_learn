@@ -32,7 +32,16 @@ class controll extends Controller
     }
 
     public function view(){
+        $customers = customer::all();
+        //echo "<pre>";
+        //print_r($customers->toArray());
 
+        $data = compact('customers');
+        return view('view')->with($data);
+    }
+
+    public function removeRegister($id){
+        echo $id;
     }
 
 }
